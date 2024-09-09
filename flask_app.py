@@ -28,6 +28,11 @@ def generate_response(user_input):
     response = rag_chain.invoke(user_input)
     return response
 
+
+@app.route("/")
+def hello():
+    return "Connection Established"
+
 # Route for chat interaction
 @app.route("/chat", methods=["POST"])
 def chat():
