@@ -23,7 +23,7 @@ def load_pdf_content():
         loader = PyPDFLoader(pdf_file)
         documents = loader.load()
 
-        doc_key = pdf_file.split("\\")[1]
+        doc_key = pdf_file.split("/")[1]
         documents_dict[doc_key] = documents
 
     return documents_dict
